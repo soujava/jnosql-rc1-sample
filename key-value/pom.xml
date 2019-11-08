@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>jakarta.nosql</groupId>
+    <artifactId>key-value</artifactId>
+    <version>0.0.1</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <version.thorntail>2.5.0.Final</version.thorntail>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <platform.sh.version>2.2.3</platform.sh.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakarta.nosql.version>0.1.0-SNAPSHOT</jakarta.nosql.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.thorntail</groupId>
+                <artifactId>bom-all</artifactId>
+                <version>${version.thorntail}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.thorntail</groupId>
+            <artifactId>microprofile</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>sh.platform</groupId>
+            <artifactId>config</artifactId>
+            <version>${platform.sh.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jnosql.artemis</groupId>
+            <artifactId>artemis-key-value</artifactId>
+            <version>${jakarta.nosql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jnosql..diana</groupId>
+            <artifactId>redis-driver</artifactId>
+            <version>${jakarta.nosql.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>microprofile</finalName>
+        <plugins>
+            <plugin>
+                <groupId>io.thorntail</groupId>
+                <artifactId>thorntail-maven-plugin</artifactId>
+                <version>${version.thorntail}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>oss.sonatype.org-snapshot</id>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>
