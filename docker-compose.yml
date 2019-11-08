@@ -6,6 +6,8 @@ services:
         image: "redis"
         networks:
           - nosql
+        environment:
+          JVM_OPTS: -Xms512m -Xmx512m
         ports:
           - 6379:6379  
 
@@ -27,6 +29,8 @@ services:
         image: "neo4j"
         networks:
           - nosql
+        environment:
+          NEO4J_AUTH: neo4j/admin
         ports:
           - 7474:7474
           - 7687:7687
