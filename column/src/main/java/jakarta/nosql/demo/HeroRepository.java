@@ -4,7 +4,6 @@ import jakarta.nosql.mapping.Repository;
 
 import java.util.List;
 
-public interface MovieRepository extends Repository<Movie, String> {
-
-    List<Movie> findAll();
+public interface HeroRepository extends Repository<Hero, String> {
+    List<Hero> findAll();
 }

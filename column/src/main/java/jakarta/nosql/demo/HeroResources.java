@@ -1,6 +1,5 @@
 package jakarta.nosql.demo;
 
-
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -17,39 +16,39 @@ import java.util.function.Supplier;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("movies")
-public class MovieResource {
+@Path("heroes")
+public class HeroResources {
 
     private static final Supplier<WebApplicationException> NOT_FOUND = () -> new WebApplicationException("Movie does not find",
             Response.Status.NOT_FOUND);
 
     @Inject
-    private MovieRepository repository;
+    private HeroRepository repository;
 
     @GET
-    public List<Movie> findAll() {
+    public List<Hero> findAll() {
         return repository.findAll();
     }
 
     @Path("{id}")
     @GET
-    public Movie find(@PathParam("id") String id) {
+    public Hero find(@PathParam("id") String id) {
         return repository.findById(id)
                 .orElseThrow(NOT_FOUND);
     }
 
     @POST
-    public Movie insert(Movie user) {
-        return repository.save(user);
+    public Hero insert(Hero hero) {
+        return repository.save(hero);
     }
 
 
     @Path("{id}")
     @GET
-    public Movie update(@PathParam("id") String id, Movie newMovie) {
-        Movie user = repository.findById(id)
+    public Hero update(@PathParam("id") String id, Hero heroUpdated) {
+        Hero user = repository.findById(id)
                 .orElseThrow(NOT_FOUND);
-        user.update(newMovie);
+        user.update(heroUpdated);
         return repository.save(user);
     }
 
