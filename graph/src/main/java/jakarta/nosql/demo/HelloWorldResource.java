@@ -12,6 +12,6 @@ public class HelloWorldResource {
     @GET
     @Produces("text/plain")
     public String doGet() {
-        return "Hello world";
+        return "hello from Jakarta NoSQL";
     }
 }
