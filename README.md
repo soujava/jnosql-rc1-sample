@@ -75,3 +75,20 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 `curl -X GET -i http://localhost:9080/movies`
 `curl -X GET -i http://localhost:9080/movies/matriz`
+
+
+
+## How to execute Thorntail and Key-value API (Redis)
+
+`mvn -DskipTests clean package thorntail:package`
+`java -jar -Xmx512m target/key-value-thorntail.jar`
+
+
+### Insert Data
+
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/users/ --data '{"nick": "otaviojava", "email": "otavio@email.com", "settings": {"notification.email": "true", "language": "Portuguese"}}'`
+
+
+### Returning Data
+
+`curl -X GET -i http://localhost:8080/users/otaviojava`
