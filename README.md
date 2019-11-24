@@ -92,3 +92,24 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 ### Returning Data
 
 `curl -X GET -i http://localhost:8080/users/otaviojava`
+
+
+## How to execute Payara and Graph API (Neo4J)
+
+`mvn -DskipTests clean package payara-micro:bundle`
+`java -jar -Xmx512m target/graph-microbundle.jar`
+
+
+### Insert Data
+
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/ --data '{"name": "lion"}'`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/ --data '{"name": "zebra"}'`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/ --data '{"name": "grass"}'`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/ --data '{"name": "giraffe"}'`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/lion/eats/zebra`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/zebra/eats/grass`
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/animals/giraffe/eats/grass`
+
+### Returning Data
+
+`curl -X GET -i http://localhost:8080/animals/`
