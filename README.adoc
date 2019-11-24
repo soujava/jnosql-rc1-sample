@@ -26,6 +26,9 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 |image:https://miro.medium.com/max/829/1*UorUp4zWjQfX3pE55qrtYQ.png[Helidon,role="left", width="250"]
 |Helidon is a collection of Java libraries for writing microservices that run on a fast web core powered by Netty.: https://helidon.io/
+
+|image:https://openliberty.io/img/twitter_card.jpg[Open Liberty,role="left", width="250"]
+|A lightweight open framework for building fast and efficient cloud-native Java microservices.: https://openliberty.io/
 |===
 
 
