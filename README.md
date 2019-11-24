@@ -16,7 +16,19 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## Servers
 
-* Helidon
+[cols="20%,80%", grid="none", frame="none", stripes="none"]
+|===
+|image:https://developers.redhat.com/blog/wp-content/uploads/2018/10/thorntail_vertical_rgb_600px_default.png[Thorntail,role="left", width="250"]
+|Thorntail offers an innovative approach to packaging and running Java EE applications by packaging them with just enough of the server runtime to "java -jar" your application. It's MicroProfile compatible, too. And, it's all much, much cooler than that: https://thorntail.io/
+
+|image:https://www.payara.fish/payara-site/media/gb/micro-logo-for-blue-fade-RGB.png[Payara,role="left", width="250"]
+|Payara Micro is the open source, lightweight middleware platform of choice for containerized Java EE (Jakarta EE) microservices deployments. Less than 70MB in size, Payara Micro requires no installation or configuration and no need for code rewrites – so you can build and deploy a fully working app within minutes: https://www.payara.fish/software/payara-server/payara-micro/
+
+|image:https://miro.medium.com/max/829/1*UorUp4zWjQfX3pE55qrtYQ.png[Helidon,role="left", width="250"]
+|Helidon is a collection of Java libraries for writing microservices that run on a fast web core powered by Netty.: https://helidon.io/
+
+|===
+
 
 ## Run the code
 
