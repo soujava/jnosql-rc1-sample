@@ -4,9 +4,11 @@ import jakarta.nosql.mapping.Column;
 import jakarta.nosql.mapping.Entity;
 import jakarta.nosql.mapping.Id;
 
-import java.util.List;
+import javax.json.bind.annotation.JsonbVisibility;
+import java.util.Set;
 
 @Entity
+@JsonbVisibility(FieldPropertyVisibilityStrategy.class)
 public class Hero {
 
     @Id
@@ -16,7 +18,7 @@ public class Hero {
     private String name;
 
     @Column
-    private List<String> powers;
+    private Set<String> powers;
 
     public void update(Hero hero) {
         this.name = hero.name;
