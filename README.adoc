@@ -32,6 +32,24 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 |===
 
 
+## Databases
+
+[cols="20%,80%", grid="none", frame="none", stripes="none"]
+|===
+|image:https://i.dlpng.com/static/png/414627_preview.png[MongoDB, role="left", width="250"]
+|MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License
+
+|image:https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1280px-Cassandra_logo.svg.png[Cassandra, role="left", width="250"]
+|Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
+
+|image:https://cdn.worldvectorlogo.com/logos/redis.svg[Redis, role="left", width="250"]
+|Redis is an in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
+
+|image:https://go.neo4j.com/rs/710-RRC-335/images/neo4j_logo.png[Neo4j, role="left", width="250"]
+|Neo4j is a graph database management system developed by Neo4j, Inc. Described by its developers as an ACID-compliant transactional database with native graph storage and processing, Neo4j is the most popular graph database according to DB-Engines ranking, and the 22nd most popular database overall.
+|===
+
+
 ## Run the code
 
 * `git clone https://github.com/soujava/jnosql-rc1-sample.git`
