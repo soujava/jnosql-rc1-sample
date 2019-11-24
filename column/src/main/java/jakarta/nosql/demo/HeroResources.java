@@ -14,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.logging.Logger;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -22,6 +23,8 @@ public class HeroResources {
 
     private static final Supplier<WebApplicationException> NOT_FOUND = () -> new WebApplicationException("Movie does not find",
             Response.Status.NOT_FOUND);
+
+    private static final Logger LOGGER = Logger.getLogger(HeroResources.class.getName());
 
     @Inject
     private HeroRepository repository;
@@ -40,6 +43,7 @@ public class HeroResources {
 
     @POST
     public Hero insert(Hero hero) {
+        LOGGER.info("Inserting: " + hero);
         return repository.save(hero);
     }
 
