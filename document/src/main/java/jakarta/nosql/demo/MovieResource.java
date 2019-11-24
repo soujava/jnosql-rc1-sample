@@ -6,6 +6,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -45,7 +46,7 @@ public class MovieResource {
 
 
     @Path("{id}")
-    @GET
+    @PUT
     public Movie update(@PathParam("id") String id, Movie newMovie) {
         Movie user = repository.findById(id)
                 .orElseThrow(NOT_FOUND);
