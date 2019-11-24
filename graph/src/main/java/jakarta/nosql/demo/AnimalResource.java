@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("animals")
-public class MovieResource {
+public class AnimalResource {
 
     private static final Supplier<WebApplicationException> NOT_FOUND = () -> new WebApplicationException("Animal does not find",
             Response.Status.NOT_FOUND);

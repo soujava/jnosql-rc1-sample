@@ -48,10 +48,10 @@ public class MovieResource {
     @Path("{id}")
     @PUT
     public Movie update(@PathParam("id") String id, Movie newMovie) {
-        Movie user = repository.findById(id)
+        Movie movie = repository.findById(id)
                 .orElseThrow(NOT_FOUND);
-        user.update(newMovie);
-        return repository.save(user);
+        movie.update(newMovie);
+        return repository.save(movie);
     }
 
     @Path("{id}")
