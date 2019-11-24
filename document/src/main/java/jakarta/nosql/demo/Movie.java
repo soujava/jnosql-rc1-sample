@@ -6,7 +6,6 @@ import jakarta.nosql.mapping.Id;
 
 import javax.json.bind.annotation.JsonbVisibility;
 import java.util.List;
-import java.util.Map;
 
 @Entity
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
