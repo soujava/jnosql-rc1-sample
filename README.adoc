@@ -34,7 +34,7 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## Run the code
 
-* `git clone https://github.com/JNOSQL/oc1-hands-on-2018.git`
+* `git clone https://github.com/soujava/jnosql-rc1-sample.git`
 * `cd oc1-hands-on-2018`
 * `mvn clean install`
 * Run databases
