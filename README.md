@@ -1,10 +1,6 @@
-# Jakarta NoSQL
+# Jakarta NoSQL Miliestone Version
 
 Eclipse JNoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. This clearly helps achieve very low coupling with the underlying NoSQL technologies used in applications. The objective of this session is to show how to use the Eclipse JNoSQL framework to connect with a NoSQL database and perform operations to manipulate and extract information.
-
-## Slides
-
-https://www.slideshare.net/otagonsan/eclipse-jnosql-one-api-to-many-nosql-databases-byol-hol5998
 
 ## Requirements
 
@@ -17,6 +13,10 @@ https://www.slideshare.net/otagonsan/eclipse-jnosql-one-api-to-many-nosql-databa
   * [Eclipse](https://www.eclipse.org/downloads/)
   * [NetBeans](https://netbeans.org/)
   * [IntelliJ](https://www.jetbrains.com/idea/download/)
+
+## Servers
+
+* Helidon
 
 ## Run the code
 
@@ -38,3 +38,18 @@ https://www.slideshare.net/otagonsan/eclipse-jnosql-one-api-to-many-nosql-databa
 
 ####  List services
 `docker-compose -f docker-compose.yml ps`
+
+
+## Helidon and Column API (Cassandra)
+
+`mvn -DskipTests clean package`
+`java -jar -Xmx512m -Dserver.port=$PORT target/column.jar`
+
+### Insert Data
+
+`curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/heroes --data '{"id": "iron_man", "name": "Iron man", "powers": ["Rich", "Armor"]}'`
+
+### Returning Data
+
+`curl -X GET -i http://localhost:8080/heroes`
+`curl -X GET -i http://localhost:8080/heroes/iron_man`
