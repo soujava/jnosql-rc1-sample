@@ -20,7 +20,7 @@ import java.util.function.Supplier;
 @Path("heroes")
 public class HeroResources {
 
-    private static final Supplier<WebApplicationException> NOT_FOUND = () -> new WebApplicationException("Movie does not find",
+    private static final Supplier<WebApplicationException> NOT_FOUND = () -> new WebApplicationException("Hero does not find",
             Response.Status.NOT_FOUND);
 
     @Inject
