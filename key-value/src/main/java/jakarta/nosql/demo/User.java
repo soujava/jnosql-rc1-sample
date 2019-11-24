@@ -1,5 +1,6 @@
 package jakarta.nosql.demo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.nosql.mapping.Entity;
 import jakarta.nosql.mapping.Id;
 
@@ -9,10 +10,13 @@ import java.util.Map;
 public class User {
 
     @Id
+    @JsonProperty
     private String nick;
 
+    @JsonProperty
     private String email;
 
+    @JsonProperty
     private Map<String, String> settings;
 
     public void update(User user) {

@@ -12,11 +12,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.logging.Logger;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("users")
 public class UserResource {
+
+    private static final Logger LOGGER = Logger.getLogger(UserResource.class.getName());
 
     @Inject
     private UserRepository repository;
@@ -32,6 +35,7 @@ public class UserResource {
 
     @POST
     public User insert(User user) {
+        LOGGER.info("insert: " + user);
         return repository.save(user);
     }
 
