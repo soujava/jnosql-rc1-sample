@@ -43,7 +43,6 @@ public class HeroResources {
         return repository.save(hero);
     }
 
-
     @Path("{id}")
     @PUT
     public Hero update(@PathParam("id") String id, Hero heroUpdated) {
