@@ -74,8 +74,8 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## How to execute Helidon and Column API (Cassandra)
 
-`mvn -DskipTests clean package`
-`java -jar -Xmx512m target/column.jar`
+* `mvn -DskipTests clean package`
+* `java -jar -Xmx512m target/column.jar`
 
 ### Insert Data
 
