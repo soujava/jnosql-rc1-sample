@@ -6,5 +6,5 @@
     <mpMetrics authentication="false" />
     <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
     <keyStore id="defaultKeyStore" password="Liberty" />
-    <webApplication location="microprofile-liberty.war" contextRoot="/"/>
+    <webApplication location="document.war" contextRoot="/"/>
 </server>
